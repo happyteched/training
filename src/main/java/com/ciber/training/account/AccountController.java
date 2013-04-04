@@ -21,7 +21,7 @@ public class AccountController {
 	@ResponseStatus(value = HttpStatus.OK)
 	@ResponseBody
 	public Account accounts(UserDetails userDetails) {
-		LOG.info("Retriving user details");
+		LOG.info("Retriving user detail s");
 		return userRepository.findByUsername(userDetails.getUsername());
 	}
 }
