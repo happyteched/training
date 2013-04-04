@@ -5,6 +5,21 @@
 <tiles-definitions>
 	<definition name="default" template="/WEB-INF/tiles/template.jsp">
 		<put-attribute name="header" value="/WEB-INF/tiles/header.jsp" />
+		<put-attribute name="topnav" value="/WEB-INF/tiles/topnav.jsp" />
 		<put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp" />
 	</definition>
+	
+	<!-- Admin template -->
+	<definition name="adminTemplate" template="/WEB-INF/tiles/template.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/admin/topnav.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp" />
+	</definition>
+	
+	<!-- User template -->
+	<definition name="userTemplate" template="/WEB-INF/tiles/template.jsp">
+		<put-attribute name="header" value="/WEB-INF/tiles/header.jsp" />
+		<put-attribute name="topnav" value="/WEB-INF/tiles/topnav.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp" />
+	</definition>
+	
 </tiles-definitions>
