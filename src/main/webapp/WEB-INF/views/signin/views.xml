@@ -11,5 +11,5 @@
 		<put-list-attribute name="styles">
 			<add-attribute value="signin.css" />
 		</put-list-attribute>
-	</definition>	
+	</definition>
 </tiles-definitions>

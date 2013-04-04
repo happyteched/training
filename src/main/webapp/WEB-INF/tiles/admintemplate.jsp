@@ -45,7 +45,6 @@
 <body>
 	<div class="wrapper">
 		<tiles:insertAttribute name="header" defaultValue="" ignore="true" />
-		<tiles:insertAttribute name="topnav" defaultValue="" ignore="true" />
 		<div class="container">
 			<tiles:insertAttribute name="body" defaultValue="" ignore="true" />
 		</div>
@@ -65,34 +64,34 @@
 		src="<c:url value="/resources/js/bootstrap-tooltip.js" />"></script>
 	<script src="<c:url value="/resources/js/jquery.cslider.js" />"></script>
 	<script type="text/javascript">
-$('#da-slider').cslider({
-    current     : 0,
-    bgincrement : 50, // parallax
-    autoplay    : true,
-    interval    : 5000
-});
-$(document).ready(function(){
-    $("#form").validate({
-        rules: {
-            email: "required",
-        },
-        highlight: function(element, errClass) {
-            $("#email").tooltip('show');
-        },
-        unhighlight: function(element, errClass) {
-            $("#email").tooltip('hide');
-        },
-        errorPlacement: function(err, element) {
-            err.hide();
-        },
-    });
-    $("#email").tooltip({
-        placement: 'bottom',
-        trigger: 'manual',
-        title: 'Please insert a valid email address!',
-    });
-});
-</script>
+		$('#da-slider').cslider({
+			current : 0,
+			bgincrement : 50, // parallax
+			autoplay : true,
+			interval : 5000
+		});
+		$(document).ready(function() {
+			$("#form").validate({
+				rules : {
+					email : "required",
+				},
+				highlight : function(element, errClass) {
+					$("#email").tooltip('show');
+				},
+				unhighlight : function(element, errClass) {
+					$("#email").tooltip('hide');
+				},
+				errorPlacement : function(err, element) {
+					err.hide();
+				},
+			});
+			$("#email").tooltip({
+				placement : 'bottom',
+				trigger : 'manual',
+				title : 'Please insert a valid email address!',
+			});
+		});
+	</script>
 
 </body>
 
