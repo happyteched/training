@@ -1,44 +1,41 @@
-<div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#">Ciber Training Admin</a>
-          <div class="nav-collapse">
-            <ul class="nav">
-              
-            </ul>
-            <ul class="nav pull-right">
-            <li class="divider-vertical"></li>
-            <li><a data-toggle="modal" href="#notif"><i class="icon-info-sign"></i> Notification <span class="badge badge-warning">4</span></a></li>
-		    <li class="divider-vertical"></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog"></i> Setting <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">User Profil</a></li>
-                <li><a href="#">Preference</a></li>
-                <li><a href="#">Delete Cookies</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-              </ul>
-            </li>
-			<li class="divider-vertical"></li>
-            <li><a href="#help"><i class="icon-question-sign"></i> Help</a></li>
-            <li class="divider-vertical"></li>
-            <li class="gravatar"><a href="profile.html"></a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">John Doe <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="profile.html"><i class="icon-user"></i> Profile</a></li>
-                <li class="divider"></li>
-                <li><a href="login.html"><i class="icon-off"></i> Sign Out</a></li>
-              </ul>
-            </li>
-          </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<div class="navbar">
+			<div class="navbar-inner fancyNav">
+				<div class="container-fluid">
+					<div class="row-fluid">
+						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</a>
+						<a class="brand" href="index-2.html"><img src="<c:url value="/resources/img/ciber.png" />" alt="" />Ciber Training</a>
+						<div class="nav-collapse collapse pull-right">							 		                 
+							<ul class="nav" id="main-nav">								
+								<li class="active"><a href="index-2.html"><i class="icon-home"></i></a></li>
+								<li><a href="<c:url value="/admin/training/add" />"><i class="icon-plus"></i> Add Trainings</a></li>
+								<li><a href="<c:url value="/admin/training/schedule" />"><i class="icon-time"></i> Schedule</a></li>
+								<li><a href="<c:url value="/admin/training/feedback" />"><i class="icon-check"></i> View Feedback</a></li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-plus"></i> Add Material</a>
+									<ul class="dropdown-menu">
+										<li><a href="calendar.html"><i class="icon-signal"></i> Videos</a></li>
+										<li><a href="charts.html"><i class="icon-calendar"></i> Presentations</a></li>
+										<li><a href="file_explorer.html"><i class="icon-folder-open"></i> Trainer Provided</a></li>
+										<li><a href="gallery.html"><i class="icon-picture"></i> Docs</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i> Gurmeet Singh <span class="badge badge-info">3</span></a>
+									<ul class="dropdown-menu">
+										<li><a href="#">Profile</a></li>
+										<li><a href="#">Setting</a></li>
+										<li class="divider"></li>
+										<li><a href="logout">Logout</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>		
+		</div>

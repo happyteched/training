@@ -15,5 +15,17 @@
 		<appender-ref ref="STDOUT" />
 	</root>
 
-	<logger name="com.ciber.training" level="ALL" />
-</configuration>
+	<logger name="com.ciber.training" level="DEBUG" />
+	
+	 <!-- Hibernate Loggers -->
+    <logger name="org.hibernate.type">
+        <level value="TRACE" />
+        <appender-ref ref="STDOUT" />
+    </logger>
+
+    <logger name="org.hibernate.SQL">
+        <level value="TRACE" />
+        <appender-ref ref="STDOUT" />
+    </logger>
+    
+   </configuration>

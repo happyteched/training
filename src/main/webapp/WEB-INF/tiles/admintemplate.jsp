@@ -1,100 +1,65 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
-<%@ taglib uri="http://tiles.apache.org/tags-tiles-extras"
-	prefix="tilesx"%>
+<%@ taglib uri="http://tiles.apache.org/tags-tiles-extras"  prefix="tilesx"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<title>Ciber Training</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Woody Landing, landing page design">
-<meta name="author" content="">
-
-<!-- styles -->
-<link href="<c:url value="/resources/css/bootstrap.min.css" />"
-	rel="stylesheet">
-<link href="<c:url value="/resources/css/responsive.css" />"
-	rel="stylesheet">
-<link href="<c:url value="/resources/css/da-slider.css" />"
-	rel="stylesheet">
-<link href="<c:url value="/resources/css/custom.css" />"
-	rel="stylesheet">
-<link href="<c:url value="/resources/css/font-awesome.css" />"
-	rel="stylesheet">
-<script type="text/javascript"
-	src="<c:url value="/resources/js/modernizr.custom.28468.js" />"></script>
-<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-<!-- Google Web Font-->
-<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700'
-	rel='stylesheet' type='text/css'>
-<!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-<!-- fav icons -->
-<link rel="shortcut icon" href="favicon.html">
-</head>
-
-<body>
-	<div class="wrapper">
+		<meta charset="utf-8">
+		<title>Dashboard | Ciber Training Admin</title>
+		<meta name="description" content="">
+		<meta name="author" content="cuongv">
+		<meta name="robots" content="index, follow">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				
+		<!-- CSS styles -->
+		<link rel='stylesheet' type='text/css' href="<c:url value="/resources/css/bootstrap.min.css" />">
+		<link rel='stylesheet' type='text/css' href="<c:url value="/resources/css/bootstrap-responsive.min.css" />">
+		<link rel='stylesheet' type='text/css' href="<c:url value="/resources/css/main.css" />">
+		<link rel='stylesheet' type='text/css' href="<c:url value="/resources/css/chosen.css" />">
+		
+		<link rel='stylesheet' type='text/css' href='<c:url value="/resources/css/plugins/cleditor/jquery.cleditor.css" />'>
+		<link rel='stylesheet' type='text/css' href='<c:url value="/resources/css/plugins/colorpicker/colorpicker.css" />'>
+		<link rel='stylesheet' type='text/css' href='<c:url value="/resources/css/plugins/datepicker/datepicker.css" />'>
+		<link rel='stylesheet' type='text/css' href='<c:url value="/resources/css/plugins/tags/tagsinput.css" />'>
+		<!--[if IE 9]><link rel="stylesheet" type="text/css" href="css/ie9.css" /><![endif]-->
+		
+		<!-- JS Libs -->
+		<script src="<c:url value="/resources/js/jquery-1.7.2.js" />"></script>
+		<script src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
+		<script src="<c:url value="/resources/js/plugins/flot/jquery.flot.js" />"></script>
+		<script src="<c:url value="/resources/js/plugins/flot/jquery.flot.pie.js" />"></script>
+		<script src="<c:url value="/resources/js/plugins/flot/jquery.flot.resize.js" />"></script>
+		<script src="<c:url value="/resources/js/jquery.chosen.min.js" />"></script>
+		<script src="<c:url value="/resources/js/jquery.screwdefaultbuttonsV2.min.js" />"></script>
+		<script src="<c:url value="/resources/js/jquery.slug.js" />"></script>
+		<script src="<c:url value="/resources/js/jquery.tablesorter.min.js" />"></script>
+		
+		<script src="<c:url value="/resources/js/plugins/cleditor/jquery.cleditor.min.js" />"></script>
+		<script src="<c:url value="/resources/js/plugins/validate/jquery.validate.min.js" />"></script>		
+		<script src="<c:url value="/resources/js/plugins/colorpicker/bootstrap-colorpicker.js" />"></script>		
+		<script src="<c:url value="/resources/js/plugins/datepicker/bootstrap-datepicker.js" />"></script>		
+		<script src="<c:url value="/resources/js/plugins/tags/jquery.tagsinput.min.js" />"></script>	
+		<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="plugins/flot/excanvas.min.js"></script><![endif]-->
+	</head>
+	<body>
+		<!-- Main page container -->
 		<tiles:insertAttribute name="header" defaultValue="" ignore="true" />
-		<div class="container">
-			<tiles:insertAttribute name="body" defaultValue="" ignore="true" />
+		<tiles:insertAttribute name="body" defaultValue="" ignore="true" />
+		
 		</div>
-		<!-- /container -->
-		<div class="push"></div>
-	</div>
-	<!-- /container -->
-	<tiles:insertAttribute name="footer" defaultValue="" ignore="true" />
-
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="<c:url value="/resources/js/jquery-1.7.2.js" />"></script>
-	<script type="text/javascript"
-		src="<c:url value="/resources/js/jquery.validate.js" />"></script>
-	<script type="text/javascript"
-		src="<c:url value="/resources/js/bootstrap-collapse.js" />"></script>
-	<script type="text/javascript"
-		src="<c:url value="/resources/js/bootstrap-tooltip.js" />"></script>
-	<script src="<c:url value="/resources/js/jquery.cslider.js" />"></script>
-	<script type="text/javascript">
-		$('#da-slider').cslider({
-			current : 0,
-			bgincrement : 50, // parallax
-			autoplay : true,
-			interval : 5000
-		});
-		$(document).ready(function() {
-			$("#form").validate({
-				rules : {
-					email : "required",
-				},
-				highlight : function(element, errClass) {
-					$("#email").tooltip('show');
-				},
-				unhighlight : function(element, errClass) {
-					$("#email").tooltip('hide');
-				},
-				errorPlacement : function(err, element) {
-					err.hide();
-				},
+		<!-- /Main page container -->
+		
+		<script src="<c:url value="/resources/js/admin/main.js" />"></script>		
+		<script src="<c:url value="/resources/js/admin/graphs.js" />"></script>	
+		<script>
+			$(function () {
+				$('.nav.nav-tabs a:first').tab('show');
+				$('.nav.nav-tabs a').click(function (e) {
+					e.preventDefault();
+					$(this).tab('show');
+				})								
 			});
-			$("#email").tooltip({
-				placement : 'bottom',
-				trigger : 'manual',
-				title : 'Please insert a valid email address!',
-			});
-		});
-	</script>
-
-</body>
-
-
-<!-- Mirrored from wbpreview.com/previews/WB0693350/ by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 20 Feb 2013 13:56:59 GMT -->
+		</script>
+	</body>	
 </html>

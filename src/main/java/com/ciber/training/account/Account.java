@@ -4,11 +4,16 @@ import javax.persistence.*;
 
 import org.codehaus.jackson.annotate.JsonIgnore;
 
-@SuppressWarnings("serial")
+
 @Entity
 @Table(name = "account")
 @NamedQuery(name = Account.FIND_BY_USERNAME, query = "select a from Account a where a.username = :username")
 public class Account implements java.io.Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	public static final String FIND_BY_USERNAME = "Account.findByUsername";
 
@@ -16,7 +21,7 @@ public class Account implements java.io.Serializable {
 	@GeneratedValue
 	private Long id;
 
-	@Column(unique = true)
+	
 	private String username;
 	
 	@JsonIgnore

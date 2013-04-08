@@ -25,11 +25,16 @@ public class AccountRepository {
 	}
 	
 	public Account findByUsername(String username) {
+//		Account account = entityManager.find(Account.class, 1);
+//		System.out.println(account);
+//		return account;
+  System.out.println(entityManager);
 		try {
 			return entityManager.createNamedQuery(Account.FIND_BY_USERNAME, Account.class)
-					.setParameter("username", username)
-					.getSingleResult();
+					.setParameter("username", username).getResultList().get(0);
+					//.getSingleResult();
 		} catch (PersistenceException e) {
+			e.printStackTrace();
 			return null;
 		}
 	}
