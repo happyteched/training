@@ -17,11 +17,11 @@
                 </a>
                 <div class="nav-collapse in" style="height:auto;">
                     <ul class="nav pull-right">
-                        <li><a class="active" href="index-2.html">Home</a></li>
+                        <li><a class="active" href="<c:url value="/" />">Home</a></li>
                         <li><a  href="index-2.html">Calendar</a></li>
                         <li><a  href="index-2.html">Recordings</a></li>
                         <li><a  href="index-2.html">Feedback</a></li>
-                         <li><a  href="index-2.html">Data Admin</a></li>
+                         
                         <security:authorize access="!isAuthenticated()">
 						<li><a href='<s:url value="/signin"></s:url>'>Sign in</a></li>
 						</security:authorize>

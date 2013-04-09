@@ -11,9 +11,10 @@
 						<a class="brand" href="index-2.html"><img src="<c:url value="/resources/img/ciber.png" />" alt="" />Ciber Training</a>
 						<div class="nav-collapse collapse pull-right">							 		                 
 							<ul class="nav" id="main-nav">								
-								<li class="active"><a href="index-2.html"><i class="icon-home"></i></a></li>
+								<li class="active"><a href="<c:url value="/" />"><i class="icon-home"></i></a></li>
 								<li><a href="<c:url value="/admin/training/add" />"><i class="icon-plus"></i> Add Trainings</a></li>
 								<li><a href="<c:url value="/admin/training/schedule" />"><i class="icon-time"></i> Schedule</a></li>
+								<li><a  href="<c:url value="/admin/training/dataAdmin" />"><i class="icon-time"></i>Data Admin</a></li>
 								<li><a href="<c:url value="/admin/training/feedback" />"><i class="icon-check"></i> View Feedback</a></li>
 								<li class="dropdown">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-plus"></i> Add Material</a>
