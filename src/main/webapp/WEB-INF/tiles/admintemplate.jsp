@@ -8,7 +8,7 @@
 		<meta charset="utf-8">
 		<title>Dashboard | Ciber Training Admin</title>
 		<meta name="description" content="">
-		<meta name="author" content="cuongv">
+		<meta name="author" content="gurmeet">
 		<meta name="robots" content="index, follow">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 				
