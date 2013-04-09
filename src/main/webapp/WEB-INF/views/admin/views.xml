@@ -10,5 +10,8 @@
 	<definition name="addTraining" extends="adminTemplate">
 		<put-attribute name="body" value="/WEB-INF/views/admin/addTraining.jsp"></put-attribute>
 	</definition>
+	<definition name="traininglisting" extends="adminTemplate">
+		<put-attribute name="body" value="/WEB-INF/views/admin/listTrainings.jsp"></put-attribute>
+	</definition>
 
 </tiles-definitions>

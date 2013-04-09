@@ -1,10 +1,12 @@
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <div class="container-fluid">
 			<div class="row-fluid">					
 				<div class="span12">					
 					<div class="data-container">
 						<ul class="nav nav-tabs" id="myTab">
 							<li class="active"><a href="#home">Add Training</a></li>
-							<li class=""><a href="#profile">List Trainings</a></li>
+							<li class=""><a href="<c:url value="/admin/training/listTrainings"/>" >List Trainings</a></li>
 							<li class=""><a href="#profile">Edit/Delete Trainings</a></li>
 							<li class="dropdown pull-right">
 								<a class="dropdown-toggle" data-toggle="dropdown" href="#">Action <b class="caret"></b></a>
@@ -15,43 +17,53 @@
 								  <li><a href="#">Delete All</a></li>
 								</ul>
 						  </li>
-						</ul>							 
+						</ul>		
+	
 						<div class="tab-content">
 							<div class="tab-pane active" id="home">
 								<div class="row-fluid">
 									<div class="span7">
-										<form class="form-vertical form-inline" method="POST">
+									<form:form class="form-vertical form-inline" method="POST"  modelAttribute="training" action="/admin/training/addTraining">
 											<div class="control-group">
-												<h4>Training Information</h4>
-												<label class="control-label">Category</label>
-												<div class="controls">
-													<select class="cho">
-														<option>Select a category</option>
-														<option>Technical Training</option>
-														<option>SoftSkills/Behavioral Training</option>
-														<option>Process Training</option>
-														<option>Others</option>
-													</select>
-												</div>
-											</div>
-											<div class="control-group">
+											<h4>Training Information</h4>
 												<label class="control-label">Training Program Name</label>
 												<div class="controls">
-													<input type="text" class="" placeholder="Title" id="title"><span class="help-inline">Inline help text</span>
+													<form:input type="text" class="" path="trainingName" placeholder="Title" id="title" ></form:input><span class="help-inline">Inline help text</span>
 												</div>
 												
 											</div>
 											<div class="control-group">
 												<label class="control-label">Competency</label>
 												<div class="controls">
-													<input type="text" class="slug"> <a href="#" data-placement="top" data-original-title="Generate nice URL" class="ttip"><i class="icon-question-sign"></i></a>
+													<form:input path="competency" type="text" class="slug"></form:input> <a href="#" data-placement="top" data-original-title="Generate nice URL" class="ttip"><i class="icon-question-sign"></i></a>
+												</div>
+											</div>
+											<div class="control-group">
+												<label class="control-label">Training Category   </label>												
+												<div class="controls">
+											<form:select path="category" class="cho">
+												<form:option value=" ">Select a category</form:option>
+												<form:option value="Technical">Technical Training</form:option>
+												<form:option value="SoftSkills/Behavioral">SoftSkills/Behavioral Training</form:option>
+												<form:option value="Process">Process Training</form:option>
+											</form:select>
+                      						</div>
+											</div>
+											<div class="control-group">
+												<label class="control-label">Training Location</label>
+												<div class="controls">
+											<form:select path="location" class="cho">
+												<form:option value=" ">Select a location</form:option>
+												<form:option value="IBC">IBC</form:option>
+												<form:option value="WTC">WTC</form:option>
+												<form:option value="External">External Location</form:option>
+											</form:select>
 												</div>
 											</div>
 											<div class="control-group">
 												<label class="control-label">Training Description</label><span class="help-inline">max 100 words</span>
 												<div class="controls">
-												<textarea id="cleditor" class="span12"></textarea>
-													
+												<form:textarea path="description" id="cleditor" class="span12" />
 												</div>
 											</div>
 											<div class="control-group">											
@@ -66,21 +78,13 @@
 													<input type="checkbox" name="ex2_c" id="ex2_c">
 													<label for="ex2_c" class="customlabel">No Restrictions</label>
 												</div>
-<!-- 												<label class="control-label"></label> -->
-<!-- 												<div class="controls"> -->
-<!-- 													<input type="radio" name="ex1" id="ex1_a" checked="checked"> -->
-<!-- 													<label for="ex1_a" class="customlabel">Published</label> -->
-													
-<!-- 													<input type="radio" name="ex1" id="ex1_b"> -->
-<!-- 													<label for="ex1_b" class="customlabel">UnPublished</label> -->
-<!-- 												</div> -->
 											</div>
 											<div class="control-group">
 												<div class="controls">
-													<button type="submit" class="btn btn-primary">Save Post</button>
+													<button type="submit" class="btn btn-primary">Add Training</button>
 												</div>
 											</div>
-										</form>
+										</form:form>	
 									</div>
 									<div class="span5">
 										<form method="POST" id="signupForm" novalidate="novalidate">																
@@ -101,22 +105,22 @@
 											<div class="div_text">
 												<div class="input-prepend"><span class="add-on"><i class="icon-calendar"></i></span><input name="date" type="text" class="span4 datepicker m" value="02-16-2012"></div>
 											</div>
-											<label class="control-label">Training Locations</label>
-											<div class="div_text">
+<!-- 											<label class="control-label">Training Location</label> -->
+<!-- 											<div class="div_text"> -->
 <!-- 												<div class="input-prepend"><span class="add-on"><i class="icon-eye-open"></i></span><input name="color" type="text" class="span2 colorpicker m" value="#006699"></div> -->
-											<select class="cho">
-														<option>Select a location</option>
-														<option>IBC</option>
-														<option>WTC</option>
-														<option>External Location</option>
-													</select>
-											</div>
+<!-- 											<select class="cho"> -->
+<!-- 														<option>Select a location</option> -->
+<!-- 														<option>IBC</option> -->
+<!-- 														<option>WTC</option> -->
+<!-- 														<option>External Location</option> -->
+<!-- 													</select> -->
+<!-- 											</div> -->
 											<label class="control-label">Training Tags</label>
 											<div class="div_text">
 												<div class="input-prepend"><span class="add-on"><i class="icon-tag"></i></span><input name="tags" id="tags" value="microsoft,java,process" class="span11"></div>
 											</div>
 											<br>
-											<button type="submit" class="btn btn-primary">Save</button>
+											<button type="submit" class="btn btn-primary" formaction="/addTraining">Save</button>
 											<button type="submit" class="btn">Cancel</button>											
 										</form>
 									</div>
@@ -201,27 +205,37 @@
 			</div>
 		</div>
 			<script>
+			
+			function showAlert(){
+				var type = 'asdasd';
+				var message = "sdfsfsdf";
+				 $("#myAlert").append($("<div class='alert-message " + type + " fade in' data-alert><p> " + message + " </p></div>"));
+				    $("#myAlert").delay(5000).fadeOut("slow", function () { $(this).remove(); });
+				//  $("#myAlert").addClass("in");
+				}
+			
 			$(function () {
-				$('#myTab a:first').tab('show');
-				$('#myTab a').click(function (e) {
-					e.preventDefault();
-					$(this).tab('show');
-				})
+				//$('#myTab a:first').tab('show');
+// 				$('#myTab a').click(function (e) {
+// 					e.preventDefault();
+// 					$(this).tab('show');
+// 				})
 				
-				$('input:radio').screwDefaultButtons({
-					image: 'url("/resources/img/check_radio_sheet.png")',
-					width: 16,
-					height: 16
-				});
+// 				$('input:radio').screwDefaultButtons({
+// 					image: 'url("resources/img/check_radio_sheet.png")',
+// 					width: 16,
+// 					height: 16
+// 				});
 				
-				$('input:checkbox').screwDefaultButtons({
-					image: 'url("/resources/img/check_radio_sheet.png")',
-					width: 16,
-					height: 16
-				});
+// 				$('input:checkbox').screwDefaultButtons({
+// 					image: 'url("resources/img/check_radio_sheet.png")',
+// 					width: 16,
+// 					height: 16
+// 				});
 			});
 			
-			$(document).ready(function() {								
+			$(document).ready(function() {
+				showAlert();
 				if($.fn.cleditor) {					
 					$('#cleditor').cleditor({ width: 'auto', height: '150px' });
 				}				
@@ -231,7 +245,7 @@
 				$('.datepicker').datepicker();				
 				$('.colorpicker').colorpicker();
 				$('#tags').tagsInput({width: '85%'});
-				$("#title").slug({hide:false});
+				//$("#title").slug({hide:false});
 				$('.ttip').tooltip();	
 				
 				$("#signupForm").validate({

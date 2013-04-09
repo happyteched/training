@@ -52,14 +52,6 @@
 		
 		<script src="<c:url value="/resources/js/admin/main.js" />"></script>		
 		<script src="<c:url value="/resources/js/admin/graphs.js" />"></script>	
-		<script>
-			$(function () {
-				$('.nav.nav-tabs a:first').tab('show');
-				$('.nav.nav-tabs a').click(function (e) {
-					e.preventDefault();
-					$(this).tab('show');
-				})								
-			});
-		</script>
+		
 	</body>	
 </html>

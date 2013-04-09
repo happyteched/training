@@ -15,12 +15,16 @@ public class TrainingRepository {
 	@PersistenceContext
 	private EntityManager entityManager;
 
-	public Training getAllTrainings() {
+	public List<Training> getAllTrainings() {
 
 		List<Training> trainings = entityManager.createQuery("from Training")
 				.getResultList();
-		System.out.println("ttttttttttt" + trainings);
-		return trainings.get(0);
+		return trainings;
+	}
+
+	public void save(Training training) {
+		entityManager.persist(training);
+		
 	}
 
 }
