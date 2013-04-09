@@ -21,6 +21,7 @@
                         <li><a  href="index-2.html">Calendar</a></li>
                         <li><a  href="index-2.html">Recordings</a></li>
                         <li><a  href="index-2.html">Feedback</a></li>
+                         <li><a  href="index-2.html">Data Admin</a></li>
                         <security:authorize access="!isAuthenticated()">
 						<li><a href='<s:url value="/signin"></s:url>'>Sign in</a></li>
 						</security:authorize>
