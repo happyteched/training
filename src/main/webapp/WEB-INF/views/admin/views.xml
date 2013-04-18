@@ -13,5 +13,19 @@
 	<definition name="traininglisting" extends="adminTemplate">
 		<put-attribute name="body" value="/WEB-INF/views/admin/listTrainings.jsp"></put-attribute>
 	</definition>
+	
+	<!-- MASTER DATA TEMPLATE -->
+	<definition name="dataAdminListingView" extends="adminmasterdatatemplate">
+		<put-attribute name="topnav" value="/WEB-INF/views/admin/topnav.jsp" />
+		<put-attribute name="leftnav" value="/WEB-INF/views/admin/masterdataLeftNav.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/masterdatalisting.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="addMasterData" extends="adminmasterdatatemplate">
+		<put-attribute name="topnav" value="/WEB-INF/views/admin/topnav.jsp" />
+		<put-attribute name="leftnav" value="/WEB-INF/views/admin/masterdataLeftNav.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/editMasterData.jsp"></put-attribute>
+	</definition>
+	
 
 </tiles-definitions>

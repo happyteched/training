@@ -31,7 +31,6 @@ public class TrainingController {
 	@Transactional
 	public String addTraining(@ModelAttribute("training")
     Training training, BindingResult result) {
-		System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa"+training);
 		trainingRepository.save(training);
 		return "redirect:add";
 	}

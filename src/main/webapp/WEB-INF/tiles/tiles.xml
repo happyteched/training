@@ -22,4 +22,8 @@
 		<put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp" />
 	</definition>
 	
+	<!-- admin master data template -->
+	<definition name="adminmasterdatatemplate" template="/WEB-INF/tiles/adminmasterdatatemplate.jsp">
+		
+	</definition>
 </tiles-definitions>
