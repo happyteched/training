@@ -7,7 +7,8 @@
                 </div>
                 <div class="box-content">
                     <div class="content-inner">
-							<div class="marg20-btm">
+							<div class="marg20-btm" ng-controller="TextController"><p>{{someText}}</p>
+							<input type="text" ng-model="someText">
                             <a href="<c:url value="/admin/data/dataAdminEdit" />" class="btn btn-primary pull-right">+ Add New</a>
                             
                         </div>

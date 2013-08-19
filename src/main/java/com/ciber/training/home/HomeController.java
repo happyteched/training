@@ -21,12 +21,18 @@ public class HomeController {
 		if(principal != null){
 			LOG.debug("USER ALREADT AUTHENTICATED");
 			if (request.isUserInRole("ROLE_ADMIN")) {
-				return "adminhome";
+				return "masteradminhome";
 			}
 			return "userhome";
 			
 		}
 		return "homeNotSignedIn";
 		//return principal != null ? "homeSignedIn" : "homeNotSignedIn";
+	}
+	
+	@RequestMapping(value = "/admin/dashboard", method = RequestMethod.GET)
+	public String navigateToDashboard(Principal principal,HttpServletRequest request) {
+		LOG.debug("HELLO");
+		return "dashboard";
 	}
 }

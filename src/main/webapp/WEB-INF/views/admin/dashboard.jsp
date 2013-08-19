@@ -2,15 +2,22 @@
 <div id="toolbar">
 			<div class="container-fluid">
 				<div class="row-fluid">
-					<div class="span5 current-page">					
-						<h4>Ciber Training Admin</h4>
-						<p>You have <span class="badge badge-warning">2</span> trainings (Spring Framework and Microsoft CRM) currently going on.</p>
-					</div>
-					<div class="span7 action-buttons">
+<!-- 					<div class="span5 current-page">					 -->
+<!-- 						<h4>Ciber Training Admin</h4> -->
+<!-- 						<p>You have <span class="badge badge-warning">2</span> trainings (Spring Framework and Microsoft CRM) currently going on.</p> -->
+<!-- 					</div> -->
+					<div class="span8 action-buttons current-page">
 						<a href="charts.html"><img src="<c:url value="/resources/img/toolbar/statistics.png" />" alt="Charts" /><br/>Metrics</a>						
 						<a href="file_explorer.html"><img src="<c:url value="/resources/img/toolbar/folder.png" />" alt="" /><br/>Completed</a>
 						<a href="gallery.html"><img src="<c:url value="/resources/img/toolbar/gallery.png" />" alt="" /><br/>Upcoming</a>
 						<a href="calendar.html"><img src="<c:url value="/resources/img/toolbar/calendar.png" />" alt="" /><br/>In Progress</a>
+						<a href="charts.html"><img src="<c:url value="/resources/img/toolbar/statistics.png" />" alt="Charts" /><br/>Metrics</a>						
+						<a href="file_explorer.html"><img src="<c:url value="/resources/img/toolbar/folder.png" />" alt="" /><br/>Completed</a>
+						<a href="gallery.html"><img src="<c:url value="/resources/img/toolbar/gallery.png" />" alt="" /><br/>Upcoming</a>
+						<a href="calendar.html"><img src="<c:url value="/resources/img/toolbar/calendar.png" />" alt="" /><br/>In Progress</a>
+						<a href="charts.html"><img src="<c:url value="/resources/img/toolbar/statistics.png" />" alt="Charts" /><br/>Metrics</a>						
+						<a href="file_explorer.html"><img src="<c:url value="/resources/img/toolbar/folder.png" />" alt="" /><br/>Completed</a>
+						<a href="gallery.html"><img src="<c:url value="/resources/img/toolbar/gallery.png" />" alt="" /><br/>Upcoming</a>
 					</div>
 				</div>
 			</div>			

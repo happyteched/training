@@ -4,6 +4,9 @@
 	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 	<!-- TODO pass js ,css and menu selections dynamically -->
 <tiles-definitions>
+	<definition name="masteradminhome" extends="adminTemplate">
+		<put-attribute name="body" value="/WEB-INF/views/admin/appdashboard.jsp"></put-attribute>
+	</definition>
 	<definition name="adminhome" extends="adminTemplate">
 		<put-attribute name="body" value="/WEB-INF/views/admin/dashboard.jsp"></put-attribute>
 	</definition>
@@ -12,6 +15,9 @@
 	</definition>
 	<definition name="traininglisting" extends="adminTemplate">
 		<put-attribute name="body" value="/WEB-INF/views/admin/listTrainings.jsp"></put-attribute>
+	</definition>
+	<definition name="dashboard" extends="adminTemplate">
+		<put-attribute name="body" value="/WEB-INF/views/admin/appdashboard.jsp"></put-attribute>
 	</definition>
 	
 	<!-- MASTER DATA TEMPLATE -->

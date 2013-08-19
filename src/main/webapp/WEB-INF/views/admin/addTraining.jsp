@@ -22,8 +22,76 @@
 						<div class="tab-content">
 							<div class="tab-pane active" id="home">
 								<div class="row-fluid">
-									<div class="span7">
+									<div class="span12">
 									<form:form class="form-vertical form-inline" method="POST"  modelAttribute="training" action="/admin/training/addTraining">
+									<div class="row-fluid">
+									<div class="span12">
+									<fieldset>
+									<legend>Basic Training Information</legend>
+									
+									<label class="control-label">Training Program Name</label>
+												<div class="controls">
+													<form:input type="text" class="" path="trainingName" placeholder="Title" id="title" ></form:input><span class="help-inline">Inline help text</span>
+												</div>
+									
+									
+									</fieldset></div>
+									
+                                                            <div class="span6">
+                                                                <div class="control-group warning">
+                                                                    <label class="control-label" for="inputWarning">Input with warning</label>
+                                                                    <div class="controls">
+                                                                        <input type="text" class="grd-white" id="inputWarning">
+                                                                        <span class="help-inline">Something may have gone wrong</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="control-group error">
+                                                                    <label class="control-label" for="inputError">Input with error</label>
+                                                                    <div class="controls">
+                                                                        <input type="text" class="grd-white" id="inputError">
+                                                                        <span class="help-inline">Please correct the error</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="control-group info">
+                                                                    <label class="control-label" for="inputInfo">Input with info</label>
+                                                                    <div class="controls">
+                                                                        <input type="text" class="grd-white" id="inputInfo">
+                                                                        <span class="help-inline">Username is taken</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="control-group success">
+                                                                    <label class="control-label" for="inputSuccess">Input with success</label>
+                                                                    <div class="controls">
+                                                                        <input type="text" class="grd-white" id="inputSuccess">
+                                                                        <span class="help-inline">Woohoo!</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="span6">
+                                                                <div class="control-group">
+                                                                    <label class="control-label">Uneditable inputs</label>
+                                                                    <div class="controls">
+                                                                        <span class="input-xlarge uneditable-input">Some value here</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="control-group">
+                                                                    <label class="control-label" for="inputDisabled">Disabled inputs</label>
+                                                                    <div class="controls">
+                                                                        <input class="input-xlarge" id="inputDisabled" type="text" placeholder="Disabled input here..." disabled="">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="control-group">
+                                                                    <label class="control-label">Form actions</label>
+                                                                    <div class="controls">
+                                                                        <div class="form-actions">
+                                                                            <button type="submit" class="btn btn-primary">Save changes</button>
+                                                                            <button type="button" class="btn">Cancel</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
 											<div class="control-group">
 											<h4>Training Information</h4>
 												<label class="control-label">Training Program Name</label>
@@ -86,44 +154,34 @@
 											</div>
 										</form:form>	
 									</div>
-									<div class="span5">
-										<form method="POST" id="signupForm" novalidate="novalidate">																
-											<h4>Training &amp; Extra Information</h4>
-											<label class="control-label">Quarter</label>
-											<div class="div_text">
-												<div class="input-prepend"><span class="add-on"><i class="icon-user"></i></span><input name="username" type="text" value="" class="span11"></div>
-											</div>			
-											<label class="control-label">Target Group</label>
-											<div class="div_text">
-												<div class="input-prepend"><span class="add-on"><i class="icon-lock"></i></span><input name="password" type="password" class="span11"></div>
-											</div>
-											<label class="control-label">External/Internal Trainers</label>
-											<div class="div_text">
-												<div class="input-prepend"><span class="add-on"><i class="icon-lock"></i></span><input name="confirm_password" type="password" class="span11"></div>
-											</div>												
-											<label class="control-label">Training Start Date</label>
-											<div class="div_text">
-												<div class="input-prepend"><span class="add-on"><i class="icon-calendar"></i></span><input name="date" type="text" class="span4 datepicker m" value="02-16-2012"></div>
-											</div>
-<!-- 											<label class="control-label">Training Location</label> -->
+<!-- 									<div class="span5"> -->
+<%-- 										<form method="POST" id="signupForm" novalidate="novalidate">																 --%>
+<!-- 											<h4>Training &amp; Extra Information</h4> -->
+<!-- 											<label class="control-label">Quarter</label> -->
 <!-- 											<div class="div_text"> -->
-<!-- 												<div class="input-prepend"><span class="add-on"><i class="icon-eye-open"></i></span><input name="color" type="text" class="span2 colorpicker m" value="#006699"></div> -->
-<!-- 											<select class="cho"> -->
-<!-- 														<option>Select a location</option> -->
-<!-- 														<option>IBC</option> -->
-<!-- 														<option>WTC</option> -->
-<!-- 														<option>External Location</option> -->
-<!-- 													</select> -->
+<!-- 												<div class="input-prepend"><span class="add-on"><i class="icon-user"></i></span><input name="username" type="text" value="" class="span11"></div> -->
+<!-- 											</div>			 -->
+<!-- 											<label class="control-label">Target Group</label> -->
+<!-- 											<div class="div_text"> -->
+<!-- 												<div class="input-prepend"><span class="add-on"><i class="icon-lock"></i></span><input name="password" type="password" class="span11"></div> -->
 <!-- 											</div> -->
-											<label class="control-label">Training Tags</label>
-											<div class="div_text">
-												<div class="input-prepend"><span class="add-on"><i class="icon-tag"></i></span><input name="tags" id="tags" value="microsoft,java,process" class="span11"></div>
-											</div>
-											<br>
-											<button type="submit" class="btn btn-primary" formaction="/addTraining">Save</button>
-											<button type="submit" class="btn">Cancel</button>											
-										</form>
-									</div>
+<!-- 											<label class="control-label">External/Internal Trainers</label> -->
+<!-- 											<div class="div_text"> -->
+<!-- 												<div class="input-prepend"><span class="add-on"><i class="icon-lock"></i></span><input name="confirm_password" type="password" class="span11"></div> -->
+<!-- 											</div>												 -->
+<!-- 											<label class="control-label">Training Start Date</label> -->
+<!-- 											<div class="div_text"> -->
+<!-- 												<div class="input-prepend"><span class="add-on"><i class="icon-calendar"></i></span><input name="date" type="text" class="span4 datepicker m" value="02-16-2012"></div> -->
+<!-- 											</div> -->
+<!-- 											<label class="control-label">Training Tags</label> -->
+<!-- 											<div class="div_text"> -->
+<!-- 												<div class="input-prepend"><span class="add-on"><i class="icon-tag"></i></span><input name="tags" id="tags" value="microsoft,java,process" class="span11"></div> -->
+<!-- 											</div> -->
+<!-- 											<br> -->
+<!-- 											<button type="submit" class="btn btn-primary" formaction="/addTraining">Save</button> -->
+<!-- 											<button type="submit" class="btn">Cancel</button>											 -->
+<%-- 										</form> --%>
+<!-- 									</div> -->
 								</div>
 							</div>
 							<div class="tab-pane" id="profile">

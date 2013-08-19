@@ -8,9 +8,10 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</a>
-						<a class="brand" href="index-2.html"><img src="<c:url value="/resources/img/ciber.png" />" alt="" />Ciber Training</a>
+						<a class="brand" href="index-2.html"><img src="<c:url value="/resources/img/ciber.png" />" alt="" /> Plus</a>
 						<div class="nav-collapse collapse pull-right">							 		                 
-							<ul class="nav" id="main-nav">								
+							<ul class="nav" id="main-nav">
+								<li class="active"><a href="<c:url value="/admin/dashboard" />"><i class="icon-home"></i></a></li>								
 								<li class="active"><a href="<c:url value="/" />"><i class="icon-home"></i></a></li>
 								<li><a href="<c:url value="/admin/training/add" />"><i class="icon-plus"></i> Add Trainings</a></li>
 								<li><a href="<c:url value="/admin/training/schedule" />"><i class="icon-time"></i> Schedule</a></li>
